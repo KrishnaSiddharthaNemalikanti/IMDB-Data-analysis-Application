@@ -1,0 +1,12 @@
+create table movies(ID varchar(250), TITLE varchar(250), IMID varchar(250), SPANISHTITLE varchar(250), IMDBPICTUREURL varchar(250), YEAR varchar(250), RTID varchar(250), RTALLCRITICSRATING varchar(250), RTALLCRITICSNUMREVIEWS varchar(250), RTALLCRITICSNUMFRESH varchar(250), RTALLCRITICSNUMROTTEN varchar(250),RTALLCRITICSSCORE varchar(250), RTTOPCRITICSRATING varchar(250), RTTOPCRITICSNUMREVIEWS varchar(250), RTTOPCRITICSNUMFRESH varchar(250), RTTOPCRITICSNUMROTTEN varchar(250), RTTOPCRITICSSCORE varchar(250), RTAUDIENCERATING varchar(250), RTAUDIENCENUMRATINGS varchar(250), RTAUDIENCESCORE varchar(250), RTPICTUREURL varchar(250));
+create table movie_locations(movieID varchar(250),location1 varchar(250),location2 varchar(250),location3 varchar(250),location4 varchar(250));
+create table movie_tags(movieID varchar(250),tagID varchar(250),tagWeight varchar(250));
+create table m_directors(movieID varchar(250),directorID varchar(250),directorName varchar(250));
+create table userratedmoviestimestamps(userID varchar(250),movieID varchar(250),rating varchar(250),timestamp varchar(250));
+create table m_actors(movieID INTEGER,actorID VARCHAR(250),actorName VARCHAR(250),ranking INTEGER);
+CREATE TABLE MOVIE_GENRES( MOVIEID VARCHAR(250),GENRE VARCHAR(200));
+create table userIDmovieIDtagIDtimestamp(userID varchar(150),movieID varchar(150),tagID varchar(150),timestamp varchar(150));
+CREATE TABLE TAGS(TAGID VARCHAR(250) PRIMARY KEY,VALUE VARCHAR(200));
+CREATE TABLE MOVIE_countries(MOVIEID VARCHAR(50),COUNTRY VARCHAR(200));
+CREATE INDEX INDGENRE ON MOVIE_GENRES(GENRE);
+CREATE INDEX INDMOVIEID ON MOVIES(MOVIEID);
